@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="scotchApp">
+<head> 
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="script.js"></script>
+</head>
+<body ng-controller="mainController">
+  <header>
+    <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/">Stock Tracker</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i pagesclass="fa fa-home"></i> Home</a></li>
+        <li><a href="#addStocks"><i class="fa fa-shield"></i>Add Stocks</a></li>
+        <li><a href="#trackedStocks"><i class="fa fa-comment"></i>Tracked Stocks</a></li>
+      </ul>
+    </div>
+    </nav>
+  </header>
+  <div id="main">
+    <div ng-view></div>
+
+
+    {{ message }}
+  </div>
+</body>
+</html>
