@@ -1,0 +1,11 @@
+app.use(function(req,res,next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
+  res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
+  next();
+});
+
+
+This is some middleware that can be placed in our main.js of our express files, to ensure that when we make a angular request to our local host, the browser will accept the request.
+
+This is to bypas the CORS security feature of the browser and communicate through our headers that it's okay to take our request. CORS stands for corss-origin resource sharing.
