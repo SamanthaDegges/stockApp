@@ -22,8 +22,8 @@ scotchApp.controller('addStocksController', function($scope){
   $scope.message = "enter your stock symbol and click add to start tracking";
   var stockPortfolio = [];
   $scope.addStock = function() {
-    stockPortfolio.push($scope.userInput)
-    console.log($scope.userInput);
+    stockPortfolio.push($scope.userInput);
+    console.log(stockPortfolio);
   }
 });
 scotchApp.controller('trackedStocksController', function($scope){
