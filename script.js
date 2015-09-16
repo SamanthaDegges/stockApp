@@ -18,14 +18,24 @@ scotchApp.config(function($routeProvider){
 scotchApp.controller('mainController', function($scope) {
     $scope.message = '';
 });
+
+
+
 scotchApp.controller('addStocksController', function($scope){
   $scope.message = "enter your stock symbol and click add to start tracking";
   var stockPortfolio = [];
   $scope.addStock = function() {
     stockPortfolio.push($scope.userInput);
-    console.log(stockPortfolio);
+    $scope.trackedStocks = stockPortfolio;
+    console.log($scope.trackedStocks);
   }
 });
+
 scotchApp.controller('trackedStocksController', function($scope){
   $scope.message = "Stocks you are currently tracking";
 });
+
+
+
+
+

@@ -5,7 +5,11 @@
   <button ng-click = 'addStock()'>Add</button>
 
   <ol>
+    <li class = 'stock' ng-repeat='stock in trackedStocks'>
 
+      {{stock}}
+
+    </li>
   </ol>
 
   <p>{{ message }}</p>
