@@ -32,7 +32,19 @@ scotchApp.controller('addStocksController', function($scope, $http){
       console.log("IT ACTUALLY WORKS"); 
       return data
     });
+    /*
+    $http.post('/addStocks', {stock: $scope.userInput}).
+    then(function(response) {
+      var dataBuffer = fs.readFileSync('stocks.json');
+      var data = JSON.parse(dataBuffer);
+      var newStock = $scope.userInput;
+      data.titles.push(newStock);
+      fs.writeFileSync('stocks.json', JSON.stringify(data));
+      res.send();
+    });
+*/
     $scope.userInput = "";
+
   }
 });
 
