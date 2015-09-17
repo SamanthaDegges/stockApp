@@ -16,7 +16,7 @@ scotchApp.config(function($routeProvider){
 });
 
 scotchApp.controller('mainController', function($scope) {
-    $scope.message = '';
+    $scope.message = 'Welcome to our stock app';
 });
 
 
